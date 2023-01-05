@@ -53,9 +53,15 @@ affect their projects.
 Govulncheck analyzes your codebase and only surfaces vulnerabilities that
 actually affect you,
 based on which functions in your code are transitively calling vulnerable functions.
-To start using govulncheck, you can run the following from your project:
+
+You can install the latest version of govulncheck using
+[go install](https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies):
 ```
 $ go install golang.org/x/vuln/cmd/govulncheck@latest
+```
+
+Then, run govulncheck inside your project directory:
+```
 $ govulncheck ./...
 ```
 
@@ -63,15 +69,14 @@ Govulncheck is a standalone tool to allow frequent updates and rapid iteration
 while we gather feedback from users.
 In the long term, we plan to integrate the govulncheck tool into the main Go distribution.
 
-To directly integrate vulnerability checking into other tools and processes,
-the [vulncheck](https://pkg.go.dev/golang.org/x/vuln/vulncheck) package exports govulncheck’s
-functionality as a Go API.
-
 ### Integrations
 
 It’s always better to learn about vulnerabilities as early as possible
-in the development and deployment process.
-To that end, we have integrated vulnerability detection into existing Go tools and services,
+in the development and deployment process. To integrate vulnerability
+checking into your own tools and processes, use
+[govulncheck -json](https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck#hdr-Flags).
+
+We have integrated vulnerability detection into existing Go tools and services,
 such as the [Go package discovery site](https://pkg.go.dev).
 For example, [this page](https://pkg.go.dev/golang.org/x/text?tab=versions)
 shows the known vulnerabilities in each version of golang.org/x/text.

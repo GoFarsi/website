@@ -55,7 +55,7 @@ Examples of past PUBLIC issues include:
 
 - [#44916](/issue/44916): archive/zip: can panic when calling Reader.Open
 - [#44913](/issue/44913): encoding/xml: infinite loop when using xml.NewTokenDecoder with a custom TokenReader
-- [#43786](/issue/43786): encoding/xml: infinite crypto/elliptic: incorrect operations on the P-224 curve
+- [#43786](/issue/43786): crypto/elliptic: incorrect operations on the P-224 curve
 - [#40928](/issue/40928): net/http/cgi,net/http/fcgi: Cross-Site Scripting (XSS) when Content-Type is not specified
 - [#40618](/issue/40618): encoding/binary: ReadUvarint and ReadVarint can read an unlimited number of bytes from invalid inputs
 - [#36834](/issue/36834): crypto/x509: certificate validation bypass on Windows 10
@@ -74,12 +74,10 @@ both (but not disclosing any more details).
 
 Some examples of past PRIVATE issues include:
 
-- [#42552](/issue/42552): math/big: panic during recursive division of very large numbers
-- [#34902](/issue/34902): net/http: Expect 100-continue panics in httputil.ReverseProxy
-- [#39360](/issue/39360): crypto/x509: Certificate.Verify method seemingly ignoring EKU requirements on Windows
-- [#34960](/issue/34960): crypto/dsa: invalid public key causes panic in dsa.Verify
-- [#34540](/issue/34540): net/http: invalid headers are normalized, allowing request smuggling
-- [#29098](/issue/29098): net/url: URL.Parse Multiple Parsing Issues
+- [#53416](/issue/53416): path/filepath: stack exhaustion in Glob
+- [#53616](/issue/53616): go/parser: stack exhaustion in all Parse* functions
+- [#54658](/issue/54658): net/http: handle server errors after sending GOAWAY
+- [#56284](/issue/56284): syscall, os/exec: unsanitized NUL in environment variables
 
 ### URGENT
 
